@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSnackbar } from 'notistack';
 import Box from '@mui/material/Box';
@@ -20,7 +20,7 @@ function EditorPreview({
   readOnly = false
 }) {
   const { enqueueSnackbar } = useSnackbar();
-  const [isPreview, setIsPreview] = React.useState(false);
+  const [isPreview, setIsPreview] = useState(false);
   const buttonText = isPreview ? 'View Source' : 'Preview';
   const handleSwitch = () => setIsPreview(!isPreview);
   const handleCopy = () =>

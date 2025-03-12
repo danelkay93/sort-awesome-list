@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSnackbar } from 'notistack';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
@@ -24,10 +24,10 @@ function Main() {
   const { token: authToken, isAuthenticated, doSignIn, doSignOut } = useAuth();
   const { enqueueSnackbar } = useSnackbar();
 
-  const [repoLink, setRepoLink] = React.useState('');
-  const [input, setInput] = React.useState(initialInput);
-  const [output, setOutput] = React.useState(initialOutput);
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [repoLink, setRepoLink] = useState('');
+  const [input, setInput] = useState(initialInput);
+  const [output, setOutput] = useState(initialOutput);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLoginLogout = () => {
     if (isAuthenticated()) {
@@ -54,7 +54,7 @@ function Main() {
       .then(() => setIsLoading(false));
   };
 
-  const [optionState, setOptionState] = React.useState(initialOptions);
+  const [optionState, setOptionState] = useState(initialOptions);
   const options = Object.keys(labels).map((key) => ({
     key,
     label: labels[key],
@@ -91,7 +91,7 @@ function Main() {
       .then(() => setIsLoading(false));
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     client.updateToken(authToken);
   }, [authToken]);
 
