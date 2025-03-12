@@ -17,8 +17,9 @@ jobs:
       # - run: pre-commit run --all-files
       
       - uses: actions/setup-node@v4
-
-      - run: npm ci
+        with:
+          cache-dependency-path: package-lock.json
+          
       - run: npx prettier --write .
 
       - uses: autofix-ci/action@v1.0.0
