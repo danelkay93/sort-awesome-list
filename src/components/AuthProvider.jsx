@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { signInWithGithub, signOutFromGithub } from '../lib/firebase';
-import { validateToken } from '../lib/api';
 
 const TOKEN = 'token';
 const AuthContext = React.createContext();
@@ -44,12 +43,8 @@ function AuthProvider({ children }) {
   React.useEffect(() => {
     const storedToken = localStorage.getItem(TOKEN);
     if (storedToken) {
-      validateToken(storedToken).then((isValid) => {
-        if (!isValid) {
-          localStorage.removeItem(TOKEN);
-          setToken(null);
-        }
-      });
+      // No need to validate token
+      setToken(storedToken);
     }
   }, []);
 
