@@ -12,8 +12,9 @@ const firebaseConfig = {
   projectId: 'awesome-sorter',
   storageBucket: 'awesome-sorter.firebasestorage.app',
   messagingSenderId: '124397735435',
-  appId: '1:124397735435:web:3b0f788ba2c8b8daf0410e'
+  appId: '1:124397735435:web:33b7feec2e7d1b57f0410e'
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
