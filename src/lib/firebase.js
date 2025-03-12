@@ -5,16 +5,16 @@ import {
   signOut,
   GithubAuthProvider
 } from 'firebase/auth';
-
-const app = initializeApp({
-  apiKey: 'AIzaSyDmksBQEc1vI8ciuVtQXEGsQPcF_garSXQ',
-  authDomain: 'sort-awesome-list.firebaseapp.com',
-  projectId: 'sort-awesome-list',
-  storageBucket: 'sort-awesome-list.appspot.com',
-  messagingSenderId: '386090953715',
-  appId: '1:386090953715:web:6e33f8eced9d248ede4086',
-  measurementId: 'G-7MBETJDTCM'
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyDIhhgE4tAzHE7Fp1xEyL2jTWIGBgeQo0M",
+  authDomain: "awesome-sorter.firebaseapp.com",
+  projectId: "awesome-sorter",
+  storageBucket: "awesome-sorter.firebasestorage.app",
+  messagingSenderId: "124397735435",
+  appId: "1:124397735435:web:3b0f788ba2c8b8daf0410e"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GithubAuthProvider();
 
