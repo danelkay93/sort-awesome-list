@@ -20,6 +20,10 @@ jobs:
         with:
           cache-dependency-path: package-lock.json
           
+      - run: npm ci
       - run: npx prettier --write .
+      # or, if you are using yarn:
+      # - run: yarn
+      # - run: yarn prettier --write .
 
-      - uses: autofix-ci/action@v1.0.0
+      - uses: autofix-ci/action@551dded8c6cc8a1054039c8bc0b8b48c51dfc6ef
