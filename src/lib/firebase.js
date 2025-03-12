@@ -7,12 +7,12 @@ import {
 } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDIhhgE4tAzHE7Fp1xEyL2jTWIGBgeQo0M",
-  authDomain: "awesome-sorter.firebaseapp.com",
-  projectId: "awesome-sorter",
-  storageBucket: "awesome-sorter.firebasestorage.app",
-  messagingSenderId: "124397735435",
-  appId: "1:124397735435:web:3b0f788ba2c8b8daf0410e"
+  apiKey: 'AIzaSyDIhhgE4tAzHE7Fp1xEyL2jTWIGBgeQo0M',
+  authDomain: 'awesome-sorter.firebaseapp.com',
+  projectId: 'awesome-sorter',
+  storageBucket: 'awesome-sorter.firebasestorage.app',
+  messagingSenderId: '124397735435',
+  appId: '1:124397735435:web:3b0f788ba2c8b8daf0410e'
 };
 
 // Initialize Firebase
